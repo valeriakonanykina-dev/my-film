@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телеграмма (1971) — Эхо</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- МАТРИЧНЫЙ ДОЖДЬ НА ФОНЕ -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            ✨ Сайт создан [ТВОЁ ИМЯ] • Фильм «Телеграмма» (1957) • Не забывайте маму и звоните близким ✨ Сайт создала Лера • Фильм «Телеграмма» (1957) • Не забывайте маму и звоните близким ✨
+        </div>
+    </div>
+
+    <!-- Абстрактный фон -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Эффекты -->
+    <div id="flying-container"></div>
+    <div id="cursor-particles"></div>
+
+    <!-- ШАПКА -->
+    <header>
+        <h1 id="mainTitle">ТЕЛЕГРАММА</h1>
+        <p class="subtitle">фильм, который заставляет позвонить маме</p>
+        <div class="poster" id="secretPoster" title="Нажми на меня 3 раза...">
+            <!-- ЗАМЕНИ ССЫЛКУ НА СВОЙ ПОСТЕР -->
+            <img src="https://media.myshows.me/movies/normal/7/37/7376c1b4c7ca8282218bb8875606b5bd.jpg" alt="Постер">
+        </div>
+        <p class="meta">СССР • 1957 • реж. Юрий Щербаков • 31 мин</p>
+    </header>
+
+    <!-- ССЫЛКА НА ФИЛЬМ -->
+    <section class="fade-in video-section">
+        <h2>Смотреть фильм</h2>
+        <p class="desc" style="text-align: center; margin-bottom: 20px;">Пронзительная короткометражка Юрия Щербакова (1971).</p>
+        <div class="video-link-container">
+            <a href="https://yandex.ru/video/preview/11797350131661049471?utm_source=copy_link&utm_medium=social&utm_campaign=share" target="_blank" class="watch-btn">
+                <span class="play-icon">▶</span>
+                <span class="btn-text">Смотреть</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ГЛАВНАЯ МЫСЛЬ -->
+    <section class="glass-panel fade-in">
+        <h2>Главная мысль</h2>
+        <div class="typewriter-container">
+            <p id="typewriter-text" class="quote-text"></p>
+        </div>
+        <p class="desc">Работа и карьера-это конечно важно,но не стоит забывать навещать и звонить своим близким и родственникам, так как может быть слишком поздно.</p>
+    </section>
+
+    <!-- ШКАТУЛКА ВРЕМЕНИ (ЦИТАТЫ) -->
+    <section class="fade-in quotes-section">
+        <h2>Шкатулка времени</h2>
+        <p class="desc" style="text-align: center; margin-bottom: 30px;">Нажми на карточку, чтобы прочитать настоящую цитату из фильма.</p>
+        
+        <div class="flip-cards">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>✉️</span><p>Телеграмма №1</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>«Дочка, приезжай, пока я жива...»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>✉️</span><p>Телеграмма №2</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>«Катерина Петровна при смерти. Приезжай немедленно».</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>✉️</span><p>Телеграмма №3</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>«Поздно. Опоздала».</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <button id="callMomBtn" class="game-btn" style="border-color: #ff4d4d; color: #ff4d4d;">❤️ Позвонить маме</button>
+            <div id="callMomResult" class="result-text" style="color: #ff4d4d;"></div>
+        </div>
+    </section>
+
+    <!-- ПЕРСОНАЖИ -->
+    <section class="fade-in">
+        <h2>Герои</h2>
+        <div class="characters">
+            <div class="character-card" data-fact="Екатерина Петровна — старая учительница, которая доживает свой век в одиночестве. Она всё прощает дочери.">
+                <div class="avatar-img">
+                    <!-- ТВОЯ КАРТИНКА 1 -->
+                    <img src="https://img-s.vremya.tv/2013-03-11/fmt_96_24_13632478572.jpg" alt="Екатерина Петровна">
+                </div>
+                <div class="card-text">
+                    <h3>Екатерина Петровна</h3>
+                </div>
+            </div>
+            <div class="character-card" data-fact="Настя — талантливый скульптор из Ленинграда. Успешная, но забывшая о самом главном человеке.">
+                <div class="avatar-img">
+                    <!-- ТВОЯ КАРТИНКА 2 -->
+                    <img src="https://sun9-2.vkuserphoto.ru/c850524/v850524436/aec6c/kXfZ43bd_ys.jpg" alt="Настя">
+                </div>
+                <div class="card-text">
+                    <h3>Настя</h3>
+                </div>
+            </div>
+            <div class="character-card" data-fact="Тихон — добрый старик, который ухаживает за Екатериной Петровной и отправляет ту самую телеграмму.">
+                <div class="avatar-img">
+                    <!-- ТВОЯ КАРТИНКА 3 -->
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_651edaceee29932583788ef0_651edcbdb469d007fd0ab096/scale_1200" alt="Тихон">
+                </div>
+                <div class="card-text">
+                    <h3>Тихон</h3>
+                </div>
+            </div>
+            <div class="character-card" data-fact="Манюшка — девочка, которая помогает по дому. Она простая, но чуткая.">
+                <div class="avatar-img">
+                    <!-- ТВОЯ КАРТИНКА 4 -->
+                    <img src="https://avatars.mds.yandex.net/i?id=d1f2a148c48879d0fc3abc60607ca2e4bc299c0c-4909855-images-thumbs&n=13" alt="Манюшка">
+                </div>
+                <div class="card-text">
+                    <h3>Манюшка</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНТЕРАКТИВ: НЕЙРОСЕТЬ ЧУВСТВ -->
+    <section class="emotion-game fade-in">
+        <h2>Нейросеть чувств</h2>
+        <p class="desc" style="text-align: center; margin-bottom: 20px;">Соедини эмоцию с персонажем. Нажми на эмоцию слева, а затем на героя справа.</p>
+        
+        <div class="game-board" id="game-board">
+            <svg id="lines-svg"></svg>
+            <div class="emotions-column">
+                <div class="emotion-item" data-emotion="loneliness">🌑 Одиночество</div>
+                <div class="emotion-item" data-emotion="vanity">🌪 Суета</div>
+                <div class="emotion-item" data-emotion="care">🤲 Забота</div>
+                <div class="emotion-item" data-emotion="hope">🌱 Надежда</div>
+            </div>
+            <div class="characters-column">
+                <div class="character-card" data-match="loneliness">
+                    <div class="avatar-img"><img src="https://www.kino-teatr.ru/movie/kadr/8831/384478.jpg" alt="Екатерина Петровна"></div>
+                    <h3>Екатерина Петровна</h3>
+                </div>
+                <div class="character-card" data-match="vanity">
+                    <div class="avatar-img"><img src="https://www.kino-teatr.ru/movie/kadr/8831/384510.jpg" alt="Настя"></div>
+                    <h3>Настя</h3>
+                </div>
+                <div class="character-card" data-match="care">
+                    <div class="avatar-img"><img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_651edaceee29932583788ef0_651edcbdb469d007fd0ab096/scale_1200" alt="Тихон"></div>
+                    <h3>Тихон</h3>
+                </div>
+                <div class="character-card" data-match="hope">
+                    <div class="avatar-img"><img src="https://img-s.vremya.tv/2013-03-11/fmt_96_24_13632478573.jpg" alt="Манюшка"></div>
+                    <h3>Манюшка</h3>
+                </div>
+            </div>
+        </div>
+        <div id="game-message" class="result-text"></div>
+    </section>
+
+    <!-- ИНТЕРАКТИВ (Телеграмма) -->
+    <section class="interactive-zone glass-panel fade-in">
+        <h2>Сигнал</h2>
+        <p>Нажми на кнопку — и получи телеграмму из прошлого.</p>
+        <button class="game-btn" id="telegramBtn">📨 Поймать сигнал</button>
+        <div id="game-result"></div>
+        <div class="mood-switcher">
+            <p>Что ты чувствуешь?</p>
+            <div class="mood-buttons">
+                <button class="mood-btn" data-mood="light">🌤 Тепло</button>
+                <button class="mood-btn" data-mood="sad">🌧 Грусть</button>
+                <button class="mood-btn" data-mood="thoughtful">🤔 Желание позвонить</button>
+            </div>
+            <div id="moodResult" class="result-text"></div>
+        </div>
+    </section>
+
+    <!-- ФАКТЫ -->
+    <section class="fade-in">
+        <h2 style="display: flex; justify-content: space-between; align-items: center;">
+            Правда
+            <button id="lightSwitch" class="light-switch" title="Включить свет">💡</button>
+        </h2>
+        <div class="facts" id="factsContainer">
+            <div class="fact-item"><strong>Короткий метр</strong>Фильм идет всего 31 минуту, но пробирает до мурашек сильнее полнометражек.</div>
+            <div class="fact-item"><strong>По Паустовскому</strong>Снят по рассказу К. Паустовского. Настя получает телеграмму прямо во время открытия выставки.</div>
+            <div class="fact-item"><strong>Музыка</strong>Композитор Вячеслав Овчинников. Музыка усиливает эмоции до предела.</div>
+            <div class="fact-item"><strong>Фильм-предупреждение</strong>Он не про школу, а про то, как легко потерять связь с самым родным человеком.</div>
+        </div>
+    </section>
+
+    <!-- КАДРЫ ИЗ ФИЛЬМА -->
+    <section class="fade-in gallery-section">
+        <h2>Мгновения</h2>
+        <p class="desc" style="margin-bottom: 20px;">Кадры, которые остаются в памяти.</p>
+        <div class="gallery">
+            <!-- ТВОИ КАДРЫ ИЗ ФИЛЬМА -->
+            <div class="gallery-item"><img src="https://www.kino-teatr.ru/movie/kadr/8831/384530.jpg" alt="Кадр"></div>
+            <div class="gallery-item"><img src="https://www.kino-teatr.ru/movie/kadr/8831/384534.jpg" alt="Кадр"></div>
+            <div class="gallery-item"><img src="https://www.kino-teatr.ru/movie/kadr/8831/384505.jpg" alt="Кадр"></div>
+        </div>
+    </section>
+
+    <footer>Сделано с любовью к советскому кино • 1971</footer>
+
+    <!-- ГОЛУБЬ С ПИСЬМОМ -->
+    <div class="pigeon-container" id="pigeonContainer" title="Поймать письмо">
+        <div class="pigeon">🕊️</div>
+        <div class="letter-icon">✉️</div>
+    </div>
+
+    <!-- Окно для цитат -->
+    <div id="quotePopup" class="quote-popup">
+        <div class="quote-popup-content">
+            <span class="close-popup" id="closePopup">×</span>
+            <h3 style="color: #fff; margin-bottom: 15px;">Вам письмо!</h3>
+            <p id="popupText"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
